@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design tokens — source of truth: docs/design-system.md */
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 20% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 20% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 20% 12%;
+    --primary: 174 62% 38%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 224 20% 12%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 45%;
+    --accent: 38 92% 55%;
+    --accent-foreground: 224 20% 12%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 174 62% 38%;
+    --success: 152 60% 40%;
+    --warning: 38 92% 50%;
+    --info: 210 90% 55%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 224 25% 8%;
+    --foreground: 220 14% 96%;
+    --card: 224 25% 10%;
+    --card-foreground: 220 14% 96%;
+    --popover: 224 25% 10%;
+    --popover-foreground: 220 14% 96%;
+    --primary: 174 62% 46%;
+    --primary-foreground: 224 25% 8%;
+    --secondary: 224 20% 16%;
+    --secondary-foreground: 220 14% 96%;
+    --muted: 224 20% 16%;
+    --muted-foreground: 220 9% 60%;
+    --accent: 38 92% 60%;
+    --accent-foreground: 224 25% 8%;
+    --destructive: 0 72% 56%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 224 20% 20%;
+    --input: 224 20% 20%;
+    --ring: 174 62% 46%;
+    --success: 152 60% 48%;
+    --warning: 38 92% 58%;
+    --info: 210 90% 63%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background font-sans text-base leading-7 text-foreground antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold tracking-tight;
+  }
+}

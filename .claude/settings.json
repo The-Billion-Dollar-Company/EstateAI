@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run lint*)",
+      "Bash(npm run test*)",
+      "Bash(npm run build*)",
+      "Bash(npm run dev*)",
+      "Bash(npx tsc*)",
+      "Bash(git status)",
+      "Bash(git diff*)",
+      "Bash(git log*)",
+      "Read(**)",
+      "Edit(client/**)",
+      "Edit(server/**)",
+      "Edit(docs/**)"
+    ],
+    "deny": [
+      "Read(.env)",
+      "Read(.env.*)",
+      "Read(server/.env)",
+      "Read(client/.env)",
+      "Bash(rm -rf*)",
+      "Bash(git push --force*)"
+    ]
+  },
+  "env": {
+    "NODE_ENV": "development"
+  }
+}

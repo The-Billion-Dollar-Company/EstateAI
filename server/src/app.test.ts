@@ -1,0 +1,19 @@
+import request from 'supertest';
+import { describe, expect, it } from 'vitest';
+
+import { createApp } from '@/app.js';
+
+describe('GET /api/v1/health', () => {
+  it('returns ok status in the standard response shape', async () => {
+    const res = await request(createApp()).get('/api/v1/health');
+    expect(res.status).toBe(200);
+    expect(res.body).toEqual({ success: true, data: { status: 'ok' } });
+  });
+
+  it('returns 404 with error shape for unknown routes', async () => {
+    const res = await request(createApp()).get('/api/v1/nope');
+    expect(res.status).toBe(404);
+    expect(res.body.success).toBe(false);
+    expect(res.body.error.code).toBe('NOT_FOUND');
+  });
+});
