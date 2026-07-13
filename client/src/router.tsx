@@ -1,25 +1,26 @@
 import { createBrowserRouter } from 'react-router-dom';
 
 import { AppShell } from '@/components/layout/AppShell';
+import { AssistantPage } from '@/pages/AssistantPage';
+import { DashboardPage } from '@/pages/DashboardPage';
 import { HomePage } from '@/pages/HomePage';
+import { LoginPage } from '@/pages/LoginPage';
 import { NotFoundPage } from '@/pages/NotFoundPage';
-import { PlaceholderPage } from '@/pages/PlaceholderPage';
+import { PropertyDetailPage } from '@/pages/PropertyDetailPage';
+import { RegisterPage } from '@/pages/RegisterPage';
+import { SearchPage } from '@/pages/SearchPage';
 
-// Route skeleton per phase 3. Real pages replace placeholders in phases 4–6.
 export const router = createBrowserRouter([
   {
     element: <AppShell />,
     children: [
       { path: '/', element: <HomePage /> },
-      { path: '/search', element: <PlaceholderPage title="Search properties" phase="phase 4" /> },
-      {
-        path: '/properties/:id',
-        element: <PlaceholderPage title="Property detail" phase="phase 4" />,
-      },
-      { path: '/assistant', element: <PlaceholderPage title="AI Assistant" phase="phase 6" /> },
-      { path: '/login', element: <PlaceholderPage title="Sign in" phase="phase 4" /> },
-      { path: '/register', element: <PlaceholderPage title="Create account" phase="phase 4" /> },
-      { path: '/dashboard', element: <PlaceholderPage title="Dashboard" phase="phase 4" /> },
+      { path: '/search', element: <SearchPage /> },
+      { path: '/properties/:id', element: <PropertyDetailPage /> },
+      { path: '/assistant', element: <AssistantPage /> },
+      { path: '/login', element: <LoginPage /> },
+      { path: '/register', element: <RegisterPage /> },
+      { path: '/dashboard', element: <DashboardPage /> },
       { path: '*', element: <NotFoundPage /> },
     ],
   },
