@@ -24,6 +24,13 @@ Thumbs.db
 !.vscode/extensions.json
 
 
-CLAUDE.md
-.claude 
-.github
+/CLAUDE.md
+/.claude/
+/.github/
+
+/docs/
+/mcp/
+/plans/
+/prompts/
+
+
