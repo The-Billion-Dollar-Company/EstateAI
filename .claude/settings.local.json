@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc *)",
+      "Bash(echo \"exit:$?\")",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(npm test *)",
+      "Bash(curl -s http://localhost:4000/api/v1/properties)",
+      "Bash(lsof -nP -iTCP:4000 -sTCP:LISTEN)",
+      "Bash(awk '{print $2}')",
+      "Bash(xargs -r kill -9)",
+      "Bash(rm -f /tmp/estateai-server-realdb.log /tmp/estateai-server-realdb2.log /tmp/resp1.txt)"
+    ]
+  }
+}
